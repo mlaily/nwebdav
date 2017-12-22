@@ -112,7 +112,7 @@ namespace NWebDav.Server.Handlers
 
                     // Determine the owner
                     var xOwner = xRoot.Elements(WebDavNamespaces.DavNs + "owner").Single();
-                    owner = xOwner.Elements().Single();
+                    owner = new XElement(WebDavNamespaces.DavNs + "ownerName", xOwner.Nodes());
                 }
                 catch (Exception)
                 {
