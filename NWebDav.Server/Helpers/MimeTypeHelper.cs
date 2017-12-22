@@ -997,7 +997,7 @@ namespace NWebDav.Server.Helpers
         };
 
         /// <summary>
-        /// The fallback MIME-type (efaults to <c>application/octet-stream</c>).
+        /// The fallback MIME-type (defaults to <c>application/octet-stream</c>).
         /// </summary>
         public static string FallbackMimeType { get; } = "application/octet-stream";
 

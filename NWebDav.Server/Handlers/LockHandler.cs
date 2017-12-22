@@ -100,7 +100,7 @@ namespace NWebDav.Server.Handlers
                     else if (xLockScopeValue.Name == WebDavNamespaces.DavNs + "shared")
                         lockScope = LockScope.Shared;
                     else
-                        throw new Exception("Invalid locksope (expected 'exclusive' or 'shared')");
+                        throw new Exception("Invalid lockscope (expected 'exclusive' or 'shared')");
 
                     // Determine the lock-type
                     var xLockType = xRoot.Elements(WebDavNamespaces.DavNs + "locktype").Single();

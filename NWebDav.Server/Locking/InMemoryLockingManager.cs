@@ -212,7 +212,7 @@ namespace NWebDav.Server.Locking
                 // Make sure the item is in the dictionary
                 ItemLockTypeDictionary itemLockTypeDictionary;
                 if (!_itemLocks.TryGetValue(key, out itemLockTypeDictionary))
-                    return new ActiveLock[0];
+                    return Enumerable.Empty<ActiveLock>();
 
                 // Return all non-expired locks
                 return itemLockTypeDictionary.SelectMany(kv => kv.Value).Where(l => !l.IsExpired).Select(GetActiveLockInfo).ToList();
